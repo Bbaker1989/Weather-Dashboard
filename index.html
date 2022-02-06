@@ -2,31 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Assets/style.css">
-<!--CSS Style-->
-    <link rel="stylesheet" href="Assets/style.css">
- <!--Bootstrap--> 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<!--Page Title-->
-    <title>Weather-Dashboard</title>
+    <title>Weather dashboard</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
 </head>
 <body>
-<!--Header-->
-<nav class="navbar navbar-dark bg-dark">
-    <h1 class="navbar-brand mb-0 h1 w-100 text-center">Weather Dashboard</h1>
-</nav>
 
-<!-- LEFT SIDE SEARCH COLUMN-->
+<!--Page Header-->
+    <header class="navbar navbar-dark  text-white text-center bg-dark weather-header">
+        <h1>Weather dashboard</h1>
+    </header>
 
-<!-- SAVED RESULTS DISPLAY-->
-
-<!-- RIGHT SIDE CONTAINER FOR CURRENT WEATHER AND 5 DAY FORECAST DISPLAY-->
-
-<!--CURRENT WEATHER AND SEARCHED CITY WEATHER RESULTS-->
-
-<!--5 DAY FORECAST-->
-<script src="Assets/script.js"></script>
-</body>
-</html>
+    <!--Main Page -->
+    <main>
+        <div class="bg-light-blue row margin-0">
+            <div class="col-sm-4 col-md-3 col-lg-3 col-xl-3 search-history">
+                <h5>Search for a City:</h5>
+                
+                <form class="form-group clearfix">
+                    
+                    <!-- Search City -->
+                    <input 
+                    type="text" 
+                    placeholder="City" 
+                    name="search" 
+                    class="form-control" 
+                    id="city-input"
+                    />
+    
+                    <!-- submit button -->
+                    <button type="submit" class="btn btn-primary" 
+                     id="submit-btn"><i class="fa fa-search"></i>
+                    </button>
+                </form>
+                
+                <!-- List of all the cities the user searched for -->
+                <div class="text-secondary d-none" id="cities-list">
+                    <h5 class="dark-text">Past searches:</h5>
+                </div>
+            </div>
